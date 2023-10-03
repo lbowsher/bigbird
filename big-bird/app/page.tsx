@@ -13,7 +13,7 @@ export default async function Home() {
   }
 
 
-  const { data: tweets } = await supabase.from('tweets').select();
+  const { data: tweets } = await supabase.from('tweets').select('*, profiles(*)');
 
   return (
     <>
