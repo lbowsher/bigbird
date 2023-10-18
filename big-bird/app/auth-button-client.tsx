@@ -22,8 +22,8 @@ export default function AuthButtonClient({ session } : { session: Session | null
     }
 
     return session ? (
-        <button onClick={handleSignOut}>Logout</button>
+        <button className='text-xs text-gray-400' onClick={handleSignOut}>Logout</button>
     ) : (
-        <button onClick={handleSignIn}>Login</button>
+        <button className='text-xs text-gray-400' onClick={handleSignIn}>Login</button>
     )
 }
