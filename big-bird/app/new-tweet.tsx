@@ -15,10 +15,13 @@ export default function NewTweet({user}: {user: User}){
     return(
         <form className="border border-gray-800 border-t-0" action={AddTweet}>
             <div className="flex py-8 px-4">
-                <div className="bg-red-200 h-12 w-12">
-                    <Image src={user.user_metadata.avatar_url} alt="user avatar" width={48} height={48}/>
+                <div className="h-12 w-12">
+                    <Image src={user.user_metadata.avatar_url} 
+                    alt="user avatar" width={48} height={48} className="rounded-full" />
                 </div>
-                <input name="Text" className="bg-blue-200 flex-1" />
+                <input name="Text" 
+                className="bg-inherit flex-1 ml-2 text-2xl placeholder-gray-500 px-2" 
+                placeholder="What is happening?!"/>
             </div>
         </form>
     )
