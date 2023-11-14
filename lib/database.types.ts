@@ -32,12 +32,14 @@ export interface Database {
           {
             foreignKeyName: "likes_tweet_id_fkey"
             columns: ["tweet_id"]
+            isOneToOne: false
             referencedRelation: "tweets"
             referencedColumns: ["id"]
           },
           {
             foreignKeyName: "likes_user_id_fkey"
             columns: ["user_id"]
+            isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
           }
@@ -66,6 +68,7 @@ export interface Database {
           {
             foreignKeyName: "profiles_id_fkey"
             columns: ["id"]
+            isOneToOne: true
             referencedRelation: "users"
             referencedColumns: ["id"]
           }
@@ -94,6 +97,7 @@ export interface Database {
           {
             foreignKeyName: "tweets_user_id_fkey"
             columns: ["user_id"]
+            isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
           }
